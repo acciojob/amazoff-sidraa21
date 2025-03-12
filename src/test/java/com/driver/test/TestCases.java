@@ -34,7 +34,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class TestCases {
 
     @Autowired
-    private OrderController orderController;
+    OrderController orderController;
 
     @BeforeEach
     void setup() {
