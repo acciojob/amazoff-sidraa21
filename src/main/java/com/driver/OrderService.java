@@ -8,9 +8,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderService {
 
-    @Autowired
-    OrderRepository orderRepository = new OrderRepository();
+//    @Autowired
+//    OrderRepository orderRepository = new OrderRepository();
 
+    private final OrderRepository orderRepository;
+
+    @Autowired
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
     public void addOrder(Order order){
         orderRepository.saveOrder(order);
     }
