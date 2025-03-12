@@ -21,9 +21,9 @@ public class OrderController {
 
 //@Autowired
 //OrderService orderService;
-    private  OrderService orderService;
+    private final OrderService orderService;
   //  @Autowired
-    public OrderController() {}
+  //  public OrderController() {}
 
     @Autowired
     public OrderController(OrderService orderService) {
